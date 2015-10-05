@@ -14,6 +14,7 @@ mydotfiles=(
 printf "\n /*** INSTALLING FONTS ***/ \n"
 git clone https://github.com/powerline/fonts ~/.fonts
 bash ~/.fonts/install.sh
+printf "\n !!! Don't forget to set your fonts in your terminal !!! \n"
 
 printf "\n /*** INSTALLING VIM Bundle ***/ \n"
 if [ -d ~/.vim/bundle ]

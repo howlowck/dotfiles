@@ -1,0 +1,15 @@
+ng()
+{
+ngrok --subdomain=${1-haodev} ${2-8000}
+}
+
+killp()
+{
+kill $(ps -e | grep gulp | grep -v grep | awk '{print $1}')
+kill $(ps -e | grep -e 'node .*harp server' | grep -v grep | awk '{print $1}')
+}
+
+startp()
+{
+gulp & harp server ${1-.} ${2-9000} &
+}

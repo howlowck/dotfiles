@@ -1,0 +1,12 @@
+*
+!.gitignore
+!.bash_profile
+!.aliases
+!.functions
+!.bash_prompt
+!.path
+!.gitignore_global
+!.git-prompt.sh
+!.vim/*
+!.vimrc
+!.gitconfig

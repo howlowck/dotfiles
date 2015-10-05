@@ -34,3 +34,4 @@ do
 done
 
 unset mydotfiles
+unset var

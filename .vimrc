@@ -26,6 +26,11 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
 
@@ -41,7 +46,7 @@ set timeoutlen=500
 syntax on
 
 set t_Co=256
-" colorscheme jellybeans
+colorscheme jellybeans
 
 " disable bells
 set noeb vb t_vb=
@@ -95,3 +100,6 @@ set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 
 "Map escape key to jj
 imap jj <esc>
+
+"Airline Plugin Fonts
+let g:airline_powerline_fonts = 1

@@ -11,27 +11,33 @@ mydotfiles=(
 	'.vimrc'
 )
 
-cd ~
+printf "\n /*** INSTALLING FONTS ***/ \n"
+git clone https://github.com/powerline/fonts ~/.fonts
+bash ~/.fonts/install.sh
 
+printf "\n /*** INSTALLING VIM Bundle ***/ \n"
 if [ -d ~/.vim/bundle ]
 then
 	printf "bundle already exists! \n"
 else
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	printf "\n remember to run :PluginInstall in vim \n"
+	printf "\n !!!  remember to run :PluginInstall in vim !!! \n"
 fi
 
-
+printf "\n /*** INSTALLING Dotfiles ***/ \n"
 
 for var in "${mydotfiles[@]}"
 do
-	if [ -a ${var} ]
+	if [ -a ~/${var} ]
 	then
 		printf "${var} already exists! \n"
 	else
-		ln -s .dotfiles/${var} ./
+		ln -s .dotfiles/${var} ~/
+		printf "${var} is linked to ~ \n"
 	fi
 done
+
+printf "\n /*** OK DONE!!! ***/ \n\n"
 
 unset mydotfiles
 unset var

@@ -2,24 +2,38 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install bundles
 "let path = '~/some/path/here'
-"call vundle#rc(path)
+"call vundle#begin(path)
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'matthewtodd/vim-twilight'
-Bundle 'nanotech/jellybeans.vim'
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+
+Plugin 'nanotech/jellybeans.vim'
+" Avoid a name conflict with L9
+" Plugin 'user/L9', {'name': 'newL9'}
 
 " autocmd VimEnter * CtrlP ~/www
 
+call vundle#end()            " required
 filetype plugin indent on     " required
+
 "Ever notice a slight lag after typing the leader key + command? This lowers
 "the timeout.
 set timeoutlen=500
@@ -27,7 +41,7 @@ set timeoutlen=500
 syntax on
 
 set t_Co=256
-colorscheme jellybeans
+" colorscheme jellybeans
 
 " disable bells
 set noeb vb t_vb=

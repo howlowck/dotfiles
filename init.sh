@@ -11,6 +11,9 @@ mydotfiles=(
 	'.vimrc'
 )
 
+read -p "What is your Dotfile Directory? [.dotfiles] " dotfiledir 
+dotfiledir=${dotfiledir:-.dotfiles}
+
 printf "\n /*** INSTALLING FONTS ***/ \n"
 git clone https://github.com/powerline/fonts ~/.fonts
 bash ~/.fonts/install.sh
@@ -33,12 +36,13 @@ do
 	then
 		printf "${var} already exists! \n"
 	else
-		ln -s .dotfiles/${var} ~/
+		ln -s ${dotfiledir}/${var} ~/
 		printf "${var} is linked to ~ \n"
 	fi
 done
 
 printf "\n /*** OK DONE!!! ***/ \n\n"
 
+unset dotfiledir
 unset mydotfiles
 unset var

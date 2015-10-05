@@ -14,10 +14,15 @@ mydotfiles=(
 read -p "What is your Dotfile Directory? [.dotfiles] " dotfiledir 
 dotfiledir=${dotfiledir:-.dotfiles}
 
-printf "\n /*** INSTALLING FONTS ***/ \n"
-git clone https://github.com/powerline/fonts ~/.fonts
-bash ~/.fonts/install.sh
-printf "\n !!! Don't forget to set your fonts in your terminal !!! \n"
+read -p "Do you want to install fonts? [y/N]" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   printf "\n /*** INSTALLING FONTS ***/ \n"
+   git clone https://github.com/powerline/fonts ~/.fonts
+   bash ~/.fonts/install.sh
+   printf "\n !!! Don't forget to set your fonts in your terminal !!! \n"
+fi
 
 printf "\n /*** INSTALLING VIM Bundle ***/ \n"
 if [ -d ~/.vim/bundle ]
@@ -43,6 +48,7 @@ done
 
 printf "\n /*** OK DONE!!! ***/ \n\n"
 
+unset REPLY
 unset dotfiledir
 unset mydotfiles
 unset var

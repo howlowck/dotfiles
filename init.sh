@@ -24,13 +24,18 @@ then
    printf "\n !!! Don't forget to set your fonts in your terminal !!! \n"
 fi
 
-printf "\n /*** INSTALLING VIM Bundle ***/ \n"
-if [ -d ~/.vim/bundle ]
+read -p "Do you want to install Vim Bundle? [y/N]" -n 1 -r
+echo 
+if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	printf "bundle already exists! \n"
-else
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-	printf "\n !!!  remember to run :PluginInstall in vim !!! \n"
+   printf "\n /*** INSTALLING VIM Bundle ***/ \n"
+   if [ -d ~/.vim/bundle ]
+   then
+	   printf "bundle already exists! \n"
+   else
+	   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	   printf "\n !!!  remember to run :PluginInstall in vim !!! \n"
+   fi
 fi
 
 printf "\n /*** INSTALLING Dotfiles ***/ \n"

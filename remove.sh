@@ -21,10 +21,10 @@ do
 	fi
 done
 
-rm -rf .vim/bundle
+rm -rf ~/.vim/bundle
 printf "removed Vim Bundle Directory \n"
 
-rm -rf .fonts
+rm -rf ~/.fonts
 printf "removed Fonts \n"
 
 unset mydotfiles

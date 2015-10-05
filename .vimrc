@@ -30,6 +30,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'airblade/vim-gitgutter'
 
 " Avoid a name conflict with L9
 " Plugin 'user/L9', {'name': 'newL9'}
@@ -46,7 +48,7 @@ set timeoutlen=500
 syntax on
 
 set t_Co=256
-colorscheme jellybeans
+colorscheme tomorrow-night
 
 " disable bells
 set noeb vb t_vb=
@@ -80,7 +82,7 @@ set autoindent
 set laststatus=2
 
 "Prefer a slightly higher line height
-set linespace=3
+" set linespace=3
 
 "Highlight searching
 set hlsearch

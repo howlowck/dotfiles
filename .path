@@ -1,1 +1,3 @@
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=$PATH:~/.composer/vendor/bin/
+export PATH=$PATH:~/npm-global/bin

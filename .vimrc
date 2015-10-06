@@ -30,7 +30,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'airblade/vim-gitgutter'
 
 " Avoid a name conflict with L9
@@ -47,10 +46,8 @@ set timeoutlen=500
 
 syntax on
 
-set rtp+=~/.vim/bundle/vim-tomorrow-theme/colors
-
 set t_Co=256
-colorscheme tomorrow-night
+colorscheme jellybeans
 
 " disable bells
 set noeb vb t_vb=

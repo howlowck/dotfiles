@@ -47,6 +47,8 @@ set timeoutlen=500
 
 syntax on
 
+set rtp+=~/.vim/bundle/vim-tomorrow-theme
+
 set t_Co=256
 colorscheme tomorrow-night
 

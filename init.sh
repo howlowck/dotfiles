@@ -11,7 +11,7 @@ mydotfiles=(
 	'.vimrc'
 )
 
-read -p "What is your Dotfile Directory? [.dotfiles] " dotfiledir 
+read -p "What is your Dotfile Directory? [.dotfiles] " dotfiledir
 dotfiledir=${dotfiledir:-.dotfiles}
 
 read -p "Do you want to install fonts? [y/N]" -n 1 -r
@@ -25,7 +25,7 @@ then
 fi
 
 read -p "Do you want to install Vim Bundle? [y/N]" -n 1 -r
-echo 
+echo
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
    printf "\n /*** INSTALLING VIM Bundle ***/ \n"

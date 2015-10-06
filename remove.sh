@@ -21,11 +21,22 @@ do
 	fi
 done
 
-rm -rf ~/.vim/bundle
-printf "removed Vim Bundle Directory \n"
+read -p "Do you want to remove Vim Bundle Directory? [y/N]" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	rm -rf ~/.vim/bundle
+	printf "removed Vim Bundle Directory \n"
+fi
 
-rm -rf ~/.fonts
-printf "removed Fonts \n"
+read -p "Do you want to remove the Fonts Directory? [y/N]" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	rm -rf ~/.fonts
+	printf "removed Fonts \n"
+fi
+
 
 unset mydotfiles
 unset var

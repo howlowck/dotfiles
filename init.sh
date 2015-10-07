@@ -4,7 +4,6 @@ mydotfiles=(
 	'.bash_profile'
 	'.bash_prompt'
  	'.functions'
- 	'.git-prompt.sh'
 	'.gitconfig'
 	'.gitignore_global'
 	'.path'
@@ -38,18 +37,34 @@ then
    fi
 fi
 
-printf "\n /*** INSTALLING Dotfiles ***/ \n"
+printf "\n /*** INSTALLING Dotfiles ***/ \n\n"
 
-for var in "${mydotfiles[@]}"
-do
-	if [ -a ~/${var} ]
-	then
-		printf "${var} already exists! \n"
-	else
-		ln -s ${dotfiledir}/${var} ~/
-		printf "${var} is linked to ~ \n"
-	fi
-done
+read -p "Would you like to copy the files to home? (or Symlink?) [y=copy/N=Symlink]" -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+	for var in "${mydotfiles[@]}"
+	do
+		if [ -a ~/${var} ]
+		then
+			printf "${var} already exists! \n"
+		else
+			cp ${dotfiledir}/${var} ~/
+			printf "${var} is copied to ~ \n"
+		fi
+	done
+else
+	for var in "${mydotfiles[@]}"
+	do
+		if [ -a ~/${var} ]
+		then
+			printf "${var} already exists! \n"
+		else
+			ln -s ${dotfiledir}/${var} ~/
+			printf "${var} is linked to ~ \n"
+		fi
+	done
+fi
 
 printf "\n /*** OK DONE!!! ***/ \n\n"
 

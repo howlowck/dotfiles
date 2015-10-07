@@ -4,7 +4,6 @@ mydotfiles=(
 	'.bash_profile'
 	'.bash_prompt'
  	'.functions'
- 	'.git-prompt.sh'
 	'.gitconfig'
 	'.gitignore_global'
 	'.path'

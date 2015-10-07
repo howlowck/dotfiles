@@ -1,11 +1,10 @@
-alias testnu='ssh hle276@preflight.ci.northwestern.edu'
-alias realnu='ssh hle276@checksix.ci.northwestern.edu'
-alias nodenu='ssh hle276@saf-sclall1a.dosa.northwestern.edu'
-alias lifeishao='ssh lifeisha@lifeishao.com'
-alias behon='ssh -p 2222 behonest@getbehonest.com'
-alias art='php artisan'
-alias dump='composer dump-autoload -o'
-alias serveme='harp server'
+alias testnu="ssh preflight"
+alias realnu="ssh checksix"
+alias nodenu="ssh nodeserver"
+alias lifeishao="ssh lifeishao"
+alias art="php artisan"
+alias dump="composer dump-autoload -o"
+alias serveme="harp server"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

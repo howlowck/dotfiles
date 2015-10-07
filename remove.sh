@@ -11,7 +11,7 @@ mydotfiles=(
 )
 for var in "${mydotfiles[@]}"
 do
-	if [ -h ~/${var} ]
+	if [ -a ~/${var} ]
 	then
     rm ~/${var}
 		printf "${var} link is deleted \n"

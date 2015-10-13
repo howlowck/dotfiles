@@ -13,3 +13,15 @@ startp()
 {
 gulp & harp server ${1-.} ${2-9000} &
 }
+
+set_iterm_profile() { 
+echo -e "\033]50;SetProfile=$1\a"
+}
+
+set_iterm_tab_color() {
+echo -e "\033]6;1;bg;$1;brightness;255\a"
+}
+
+reset_iterm_tab_color() {
+echo -e "\033]6;1;bg;*;default\a"
+}

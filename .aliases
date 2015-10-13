@@ -1,10 +1,13 @@
-alias testnu="ssh preflight"
-alias realnu="ssh checksix"
+# set iterm profile
+alias testnu="set_iterm_profile Preflight; set_iterm_tab_color blue;  ssh preflight; set_iterm_profile Default; reset_iterm_tab_color;"
+alias realnu="set_iterm_profile Checksix; set_iterm_tab_color green; ssh checksix; set_iterm_profile Default; reset_iterm_tab_color;"
 alias nodenu="ssh nodeserver"
 alias lifeishao="ssh lifeishao"
 alias art="php artisan"
 alias dump="composer dump-autoload -o"
 alias serveme="harp server"
+
+alias ds="bash --login '/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh'"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

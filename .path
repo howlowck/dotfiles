@@ -1,3 +1,14 @@
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$PATH:~/.composer/vendor/bin/
 export PATH=$PATH:~/npm-global/bin
+export PATH=$PATH:~/npm-global
+export PATH=$PATH:/usr/local/go/bin
+
+export GOPATH=$HOME/go-projects
+
+export PATH=$PATH:$GOPATH/bin
+
+export GEM_HOME=$HOME/.gem
+export GEM_PATH=$HOME/.gem
+
+export PATH=$PATH:$GEM_PATH/bin

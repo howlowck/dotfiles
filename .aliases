@@ -1,10 +1,27 @@
-alias testnu="ssh preflight"
-alias realnu="ssh checksix"
+# set iterm profiles based on server connections
+alias testnu="set_iterm_profile Preflight; set_iterm_tab_color blue; ssh preflight; set_iterm_profile Default; reset_iterm_tab_color"
+alias realnu="set_iterm_profile Checksix; set_iterm_tab_color green; ssh checksix; set_iterm_profile Default; reset_iterm_tab_color"
 alias nodenu="ssh nodeserver"
 alias lifeishao="ssh lifeishao"
-alias art="php artisan"
-alias dump="composer dump-autoload -o"
-alias serveme="harp server"
+
+# PHP Shortcuts
+alias art="docker-compose run artisan"
+alias dump="docker-compose run composer dump-autoload -o"
+alias composer="docker-compose run composer"
+alias phpunit="docker-compose run phpunit"
+alias hostcomposer="/usr/local/bin/composer"
+
+alias serveme="http-server -c-1 -p 9000"
+
+# Laravel
+alias larmod="chmod -R 777 storage/ && chmod -R 777 bootstrap/cache"
+
+# Docker shortcuts
+alias d="docker"
+alias doco="docker-compose"
+alias doma="docker-machine"
+alias allcontainers="docker ps -a -q"
+alias dockerproxy="docker run -d -p 80:80 --restart=always -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

@@ -1,6 +1,6 @@
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$PATH:~/.composer/vendor/bin/
-export PATH=$PATH:~/npm-packages/bin
+export PATH=$PATH:~/.npm-packages/bin
 export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go-projects

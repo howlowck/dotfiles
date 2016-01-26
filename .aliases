@@ -4,11 +4,13 @@ alias realnu="set_iterm_profile Checksix; set_iterm_tab_color green; ssh checksi
 alias nodenu="ssh nodeserver"
 alias lifeishao="ssh lifeishao"
 
+alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+
 # PHP Shortcuts
-alias art="docker-compose run artisan"
-alias dump="docker-compose run composer dump-autoload -o"
-alias composer="docker-compose run composer"
-alias phpunit="docker-compose run phpunit"
+# alias art="docker-compose run artisan"
+# alias dump="docker-compose run composer dump-autoload -o"
+# alias composer="docker-compose run composer"
+# alias phpunit="docker-compose run phpunit"
 alias hostcomposer="/usr/local/bin/composer"
 
 alias serveme="http-server -c-1 -p 9000"

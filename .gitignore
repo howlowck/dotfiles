@@ -12,4 +12,4 @@
 !.gitconfig
 !init.sh
 !remove.sh
-
+!.tmux.conf

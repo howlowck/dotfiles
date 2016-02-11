@@ -8,6 +8,7 @@ mydotfiles=(
 	'.gitignore_global'
 	'.path'
 	'.vimrc'
+   '.tmux.conf'
 )
 
 read -p "What is your Dotfile Directory? [.dotfiles] " dotfiledir

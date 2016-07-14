@@ -5,6 +5,7 @@ alias nodenu="ssh nodeserver"
 alias lifeishao="ssh lifeishao"
 
 alias homestead='function __homestead() { (cd ~/Homestead && vagrant $*); unset -f __homestead; }; __homestead'
+alias soil='function __soil() { (cd ~/environment && vagrant $*); unset -f __soil; }; __soil'
 
 # PHP Shortcuts
 # alias art="docker-compose run artisan"
@@ -63,3 +64,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+alias mux="tmux attach -t $(tmux ls -F '#{session_name}')"
+alias fol="less +F -R"

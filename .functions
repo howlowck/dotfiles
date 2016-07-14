@@ -38,3 +38,7 @@ lsof -i :$1
 vscode () { 
 VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;
 }
+
+digs() {
+dig +nostats +nocomments +nocmd +noquestion +recurse $1 any
+}

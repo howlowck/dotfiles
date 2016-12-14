@@ -67,3 +67,6 @@ alias reload="exec $SHELL -l"
 
 alias mux="tmux attach -t $(tmux ls -F '#{session_name}')"
 alias fol="less +F -R"
+
+alias art="php artisan"
+alias dep="./vendor/bin/dep"

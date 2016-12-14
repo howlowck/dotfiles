@@ -19,6 +19,11 @@ dobash()
 docker exec -it ${1-} bash
 }
 
+kali()
+{
+docker run -t -i kalilinux/kali-linux-docker /bin/bash
+}
+
 set_iterm_profile() {
 echo -e "\033]50;SetProfile=$1\a" 
 }

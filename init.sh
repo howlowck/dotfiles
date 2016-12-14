@@ -4,7 +4,6 @@ mydotfiles=(
 	'.bash_profile'
 	'.bash_prompt'
  	'.functions'
-	'.gitconfig'
 	'.gitignore_global'
 	'.path'
 	'.vimrc'
@@ -65,6 +64,17 @@ else
 			printf "${var} is linked to ~ \n"
 		fi
 	done
+fi
+
+printf "copying .gitconfig to ~ (because it has personalized configs) \n"
+if [ -a ~/.gitconfig ]
+then
+  	printf ".gitconfig already exists! \n"
+else
+	cp ${dotfiledir}/.gitconfig ~/
+	printf ".gitconfig is copied to ~ \n"
+   printf "\n!! Make sure to run \'git config --global user.name \"John Doe\" \' to set your git name !!\n"
+   printf "!! Make sure to run \'git config --global user.email john@example.com \' to set your git email !!\n"
 fi
 
 printf "\n /*** OK DONE!!! ***/ \n\n"

@@ -8,7 +8,7 @@ Hao's Dotfiles
 * one-line install bash file
 
 ### Getting Started:
-0. Clone this repo to your `~/.dotfiles` directory.  Run: `git clone git@github.com:howlowck/dotfiles.git ~/.dotfiles`
+0. Clone this repo to your `~/.dotfiles` directory: `git clone git@github.com:howlowck/dotfiles.git ~/.dotfiles`
 1. backup your `.bash_profile` by renaming it to something else.  
 2. Go to your home directory  
 3. Run `bash .dotfiles/init.sh`  
